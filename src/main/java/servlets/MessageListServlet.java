@@ -24,7 +24,7 @@ public class MessageListServlet extends ChatServlet {
 // В обратном порядке записать в поток HTML-разметку для каждого сообщения
         for (int i = messages.size() - 1; i >= 0; i--) {
             ChatMessage aMessage = messages.get(i);
-
+            pw.println("<div>Пользователь <strong>" + aMessage.getAuthor().getName() + "</strong> пришёл в чат" + "</div>");
             pw.println("<div><strong>" + aMessage.getAuthor().getName()
                     + "</strong>: " + aMessage.getMessage() + "</div>");
 
